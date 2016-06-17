@@ -32,6 +32,7 @@ import org.opensaml.saml2.core.NameIDPolicy;
 import org.opensaml.saml2.core.Response;
 import org.opensaml.saml2.core.impl.NameIDBuilder;
 import org.opensaml.saml2.core.impl.NameIDPolicyBuilder;
+import org.opensaml.saml2.core.impl.StatusResponseTypeImpl;
 import org.opensaml.xml.ConfigurationException;
 import org.opensaml.xml.XMLObject;
 import org.opensaml.xml.XMLObjectBuilder;
@@ -265,7 +266,7 @@ public class Util {
      * @param resp SAML Response
      * @return true, if signature is valid.
      */
-    public static boolean validateSignature(Response resp, String keyStoreName,
+    public static boolean validateSignature(StatusResponseTypeImpl resp, String keyStoreName,
                                             String keyStorePassword, String alias, int tenantId,
                                             String tenantDomain) {
         boolean isSigValid = false;
